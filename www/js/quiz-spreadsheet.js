@@ -1,5 +1,5 @@
 // Client ID and API key from the Developer Console
-      var CLIENT_ID = '1bJvqu2n2Tfsf91vRqMsrwYdyh31wBCyJ9qU-usbWeOk';
+      var CLIENT_ID = '607367220939-dp0u7mbuba521bth20am5moqenrd7k3n.apps.googleusercontent.com';
       var API_KEY = 'AIzaSyBx2kIQQJOGj9LxZeuN04nQLTL9grrAaHg ';
 
       // Array of API discovery doc URLs for APIs used by the quickstart
@@ -87,8 +87,8 @@
        */
       function listMajors() {
         gapi.client.sheets.spreadsheets.values.get({
-          spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
-          range: 'Class Data!A2:E',
+          spreadsheetId: '1bJvqu2n2Tfsf91vRqMsrwYdyh31wBCyJ9qU-usbWeOk',
+          range: 'A1:M30',
         }).then(function(response) {
           var range = response.result;
           if (range.values.length > 0) {
@@ -105,3 +105,18 @@
           appendPre('Error: ' + response.result.error.message);
         });
       }
+
+      function htmlToElements(html) {
+            var template = document.createElement('template');
+            template.innerHTML = html;
+            return template.content.childNodes;
+      }
+
+      var rows = htmlToElements('<button class="adminbtn" onclick="window.location.href= 'quizadmin.html'">Admins</button>.');
+
+      function printquizlabel(){
+            
+      }
+      
+      
+
