@@ -59,18 +59,6 @@
 </head>
 
 <body>
-	<script id='script'>
-	        localStorage.clear();
-	        var sample_url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTjCmJRop-XFkNWlGa-2AP1i0WgclPjSdKT5MbFrSDykLquyHJYTMT9gectBh2Ij8nhz95Irm4RB0Tx/pubhtml";
-	        var url_parameter = document.location.search.split(/\?url=/)[1]
-	        var url = url_parameter || sample_url;
-	        var googleSpreadsheet = new GoogleSpreadsheet();
-	        googleSpreadsheet.url(url);
-	        googleSpreadsheet.load(function(result) {
-		$('#results').html(JSON.stringify(result).replace(/,/g,",\n"));
-	      });
-	</script>
-
 	<div class="limiter">
 
 		<div class="container">
