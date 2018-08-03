@@ -30,6 +30,7 @@
         }).then(function () {
               //See if calling API directly will work. Google documentation seems to always suggest using sign in
               listMajors();
+              console.log("listmajors");
         });
       }
 
