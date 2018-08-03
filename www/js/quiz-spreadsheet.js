@@ -13,6 +13,7 @@
        *  On load, called to load the auth2 library and API client library.
        */
       function handleClientLoad() {
+        console.log("test1");
         gapi.load(initClient);
       }
 
