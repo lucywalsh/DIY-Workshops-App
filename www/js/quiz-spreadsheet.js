@@ -70,8 +70,7 @@
       }
 
       /**
-       * Append a pre element to the body containing the given message
-       * as its text node. Used to display the results of the API call.
+       * APPENDPRE IS A FUNCTION USED TO PRINT TO DOCUMENT
        *
        * @param {string} message Text to be placed in pre element.
        */
@@ -95,6 +94,9 @@
             appendPre('Name, Major:');
             for (i = 0; i < range.values.length; i++) {
               var row = range.values[i];
+              for (i = 0; i < row.length; i++){
+                    
+              }
               // Print columns A and E, which correspond to indices 0 and 4.
               appendPre(row[0] + ', ' + row[4]);
             }
