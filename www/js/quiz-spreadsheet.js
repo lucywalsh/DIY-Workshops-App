@@ -38,8 +38,8 @@
        * @param {string} message Text to be placed in pre element.
        */
       function appendPre(message) {
-        var pre = document.getElementById('content');
-        var textContent = document.createTextNode(message + '\n');
+        var pre = document.createElement("button");
+        var textContent = document.createTextNode(message);
         pre.appendChild(textContent);
       }
 
@@ -50,18 +50,19 @@
       function listMajors() {
         gapi.client.sheets.spreadsheets.values.get({
           spreadsheetId: '1bJvqu2n2Tfsf91vRqMsrwYdyh31wBCyJ9qU-usbWeOk',
-          range: 'A1:M30',
+          range: 'B1:M30',
         }).then(function(response) {
           var range = response.result;
           if (range.values.length > 0) {
             appendPre('Name, Major:');
             for (i = 0; i < range.values.length; i++) {
               var row = range.values[i];
-              for (i = 0; i < row.length; i++){
-                    
-              }
+              for (i = 0; i < row.length; i++){};
               // Print columns A and E, which correspond to indices 0 and 4.
-              appendPre(row[0] + ', ' + row[4]);
+              var cellheader = row[1].slice(0,4);
+              if (cellheader === "Quiz"){
+                    appendPre(row[1]);
+              }
             }
           } else {
             appendPre('No data found.');
