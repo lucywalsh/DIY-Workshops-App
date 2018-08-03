@@ -54,7 +54,6 @@
         }).then(function(response) {
           var range = response.result;
           if (range.values.length > 0) {
-            appendPre('Name, Major:');
             for (i = 0; i < range.values.length; i++) {
               var row = range.values[i];
               for (i = 0; i < row.length; i++){};
@@ -65,24 +64,9 @@
               }
             }
           } else {
-            appendPre('No data found.');
+            console.log('No data found.');
           }
         }, function(response) {
-          appendPre('Error: ' + response.result.error.message);
+          console.log('Error: ' + response.result.error.message);
         });
       }
-
-      function htmlToElements(html) {
-            var template = document.createElement('template');
-            template.innerHTML = html;
-            return template.content.childNodes;
-      }
-
-      var rows = htmlToElements('<button class="adminbtn" onclick="window.location.href= 'quizadmin.html'">Admins</button>.');
-
-      function printquizlabel(){
-            
-      }
-      
-      
-
