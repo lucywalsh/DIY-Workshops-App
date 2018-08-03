@@ -37,12 +37,17 @@
        *
        * @param {string} message Text to be placed in pre element.
        */
-      function appendPre(message) {
+       function nextquestion(header,number){
+                  
+            }  
+
+      function appendPre(message,header) {
         var pre = document.createElement("button");
         var textContent = document.createTextNode(message);
         pre.appendChild(textContent);
+            document.appendChild(pre);
+            pre.onclick = nextquestion(header,1);
       }
-
       /**
        * Print the names and majors of students in a sample spreadsheet:
        * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
@@ -52,6 +57,7 @@
           spreadsheetId: '1bJvqu2n2Tfsf91vRqMsrwYdyh31wBCyJ9qU-usbWeOk',
           range: 'B1:M30',
         }).then(function(response) {
+          console.log('lol');
           var range = response.result;
           if (range.values.length > 0) {
             for (i = 0; i < range.values.length; i++) {
@@ -60,7 +66,7 @@
               // Print columns A and E, which correspond to indices 0 and 4.
               var cellheader = row[1].slice(0,4);
               if (cellheader === "Quiz"){
-                    appendPre(row[1]);
+                    appendPre(row[1],i);
               }
             }
           } else {
