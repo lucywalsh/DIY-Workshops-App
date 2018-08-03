@@ -53,12 +53,14 @@
 	<link rel="stylesheet" type="text/css" href= "css/main.css">
 
 <!--===============================================================================================-->
-	
+	<script type="text/javascript" src= "js/quiz-spreadsheet.js"></script>
+	<script src="https://apis.google.com/js/api.js"></script>
 	
 </head>
 
-<body>
-	<script type="text/javascript" src= "js/quiz-spreadsheet.js"></script>
+<body onload = "handleClientLoad()">
+	
+	
 	<div class="limiter">
 
 		<div class="container">
@@ -73,8 +75,8 @@
 
 	</div>
 	
-	<script defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+	<!--<script defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>-->
 <!--===============================================================================================-->
 
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
