@@ -128,6 +128,7 @@
       function appendPre(message,header) {
         var pre = document.createElement("button");
         var textContent = document.createTextNode(message);
+	pre.value = message;
         pre.appendChild(textContent);
         var container = document.querySelector('.container');
 	container.appendChild(pre);
@@ -155,7 +156,7 @@
 		      if (cellheader === "Quiz"){
 			    appendPre(row[1],i);
 		      }
-	    }
+	   	    }
             }
           } else {
             console.log('No data found.');
