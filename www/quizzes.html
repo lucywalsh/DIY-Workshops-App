@@ -68,9 +68,9 @@
 
 		<div class="container">
 
-			<!--<img src="img/blob.png">-->
+			<img src="img/blob.png">
 			
-			<!--h1 class = "quizheading">Quizzes</h1>-->
+			<h1 class = "quizheading">Quizzes</h1>
 
 			<!--<i class="zmdi zmdi-assignment zmdi-hc-4x"></i>-->
 
@@ -131,7 +131,8 @@
 	pre.type = message;
 	pre.value = message;
 	pre.class =  ".btn";
-        var container = document.querySelector('.container');
+        var container = document.getElementsByClass('quizheading');
+	container.value = message
 	container.appendChild(pre);
         pre.onclick = nextquestion(header,1);
 	console.log("Button created");
