@@ -129,7 +129,8 @@
         var pre = document.createElement("button");
         var textContent = document.createTextNode(message);
         pre.appendChild(textContent);
-        document.body.getElementsByTagName("div").appendChild(pre);
+        var container = document.body.getElementsByTagName("div");
+	container.appendChild(pre);
         pre.onclick = nextquestion(header,1);
 	console.log("Button created");
       }
