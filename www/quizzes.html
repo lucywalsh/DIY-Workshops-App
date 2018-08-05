@@ -132,7 +132,7 @@
 	pre.value = message;
 	pre.class =  ".btn";
         var container = document.querySelector('.container');
-	container.appendChild(pre);
+	document.body.appendChild(pre);
         pre.onclick = nextquestion(header,1);
 	console.log("Button created");
       }
