@@ -152,7 +152,7 @@
               var row = range.values[i];
               // Print columns A and E, which correspond to indices 0 and 4.
 	      console.log(row[0])
-		    if (typeof row[0] !== undefined){
+		    if (typeof row[0] !== "undefined"){
 		      var cellheader = row[0].slice(0,4);
 		      if (cellheader === "Quiz"){
 			    appendPre(row[1],i);
