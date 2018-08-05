@@ -126,8 +126,9 @@
             }  
 
       function appendPre(message,header) {
-        var pre = document.createElement("button");
-        var textContent = document.createTextNode(message);
+        var pre = document.createElement("input");
+        //var textContent = document.createTextNode(message);
+	pre.type = "button";
 	pre.value = message;
         pre.appendChild(textContent);
         var container = document.querySelector('.container');
