@@ -129,8 +129,9 @@
         var pre = document.createElement("button");
         var textContent = document.createTextNode(message);
         pre.appendChild(textContent);
-            document.body.appendChild(pre);
-            pre.onclick = nextquestion(header,1);
+        document.body.appendChild(pre);
+        pre.onclick = nextquestion(header,1);
+	console.log("Button created");
       }
       /**
        * Print the names and majors of students in a sample spreadsheet:
