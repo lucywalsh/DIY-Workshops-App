@@ -126,11 +126,12 @@
             }  
 
       function appendPre(message,header) {
-        var pre = document.createElement("BUTTON");
+	var container = document.querySelector('.container');
+        var pre = container.createElement("BUTTON");
         var textContent = document.createTextNode(message);
 	pre.value = message;
         pre.appendChild(textContent);
-        var container = document.querySelector('.container');
+        
 	container.appendChild(pre);
         pre.onclick = nextquestion(header,1);
 	console.log("Button created");
