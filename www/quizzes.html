@@ -122,7 +122,10 @@
        * @param {string} message Text to be placed in pre element.
        */
        function nextquestion(header,number){
-            var menubuttons = document.getElementsByClassName(".quizmenbutn");
+            var menubuttons = document.getElementsByClassName("quizmenubtn");
+	       for (var i = 0; i = menubuttons.length(); i++){
+		       menubuttons[i].parentNode.removeChild(menubuttons[i]);
+	       }
 	    //menubuttons.remove();
 	    gapi.client.sheets.spreadsheets.values.get({
             	spreadsheetId: '1bJvqu2n2Tfsf91vRqMsrwYdyh31wBCyJ9qU-usbWeOk',
@@ -145,7 +148,7 @@
         var pre = document.createElement("button");
 	var textnode = document.createTextNode(message);
 	pre.appendChild(textnode);
-	pre.class =  ".quizmenubtn";
+	pre.class =  "quizmenubtn";
 	var division = document.body.getElementsByClassName("container")[0];
 	division.appendChild(pre);
         pre.onclick = nextquestion(header,1);
@@ -170,7 +173,7 @@
 		    if (typeof row[0] !== "undefined"){
 		      var cellheader = row[0].slice(0,4);
 		      if (cellheader === "Quiz"){
-			    appendPre(row[0],i);
+			    appendPre(row[0].slice(4,),i);
 		      }
 	   	    }
             }
