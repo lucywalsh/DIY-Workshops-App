@@ -146,8 +146,7 @@
 	var textnode = document.createTextNode(message);
 	pre.appendChild(textnode);
 	pre.class =  ".quizmenubtn";
-	var container = document.getElementsByClassName(".container");
-	container.appendChild(pre);
+	document.getElementsByClassName(".container").appendchild(pre);
         pre.onclick = nextquestion(header,1);
 	console.log("Button created");
       }
