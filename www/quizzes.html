@@ -139,7 +139,7 @@
 	   option.class = "quizmenubtn";
 	   var container = document.getElementsByClassName("container")[0];
 	   container.appendChild(option);
-	   container.onclick = nextquestion(header,number+1)
+	   option.onclick = nextquestion(header,number+1);
        }
        function nextquestion(header,number){
 	    console.log("button clicked");
@@ -177,7 +177,7 @@
 	var division = document.body.getElementsByClassName("container")[0];
 	division.appendChild(pre);
 	console.log("Button created");
-	pre.onclick = nextquestion(header,2);
+	pre.addEventListener("click",nextquestion(header,2));
       }
       /**
        * Print the names and majors of students in a sample spreadsheet:
