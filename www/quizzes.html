@@ -121,6 +121,12 @@
        *
        * @param {string} message Text to be placed in pre element.
        */
+       function createquestion(question,range){
+       
+       }
+       function createanswer(option, header,range){
+	       
+       }
        function nextquestion(header,number){
 	    console.log("button clicked");
             var menubuttons = document.getElementsByClassName("quizmenubtn");
@@ -136,7 +142,11 @@
           	if (range.values.length > 0) {
 			var row = range.values[header];
 			var question = row[number+1];
-			
+			createquestion(question,range);
+			createanswer(A,header,range);
+			createanswer(B,header,range);
+			createanswer(C,header,range);
+			createanswer(D,header,range);
 		} else {
 		    console.log('No data found.');
 		}	    
