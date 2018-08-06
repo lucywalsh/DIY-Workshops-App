@@ -127,7 +127,7 @@
 	   quizlabel.class = "quizheading";
 	   var textNode = document.createTextNode(question);
 	   quizlabel.appendChild(textNode);
-	   var division = document.getElementByClassName("container")[0];
+	   var division = document.getElementsByClassName("container")[0];
 	   division.appendChild(quizlabel);
        }
        function createanswer(option, header,range,questionnumber){
