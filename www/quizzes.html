@@ -122,7 +122,23 @@
        * @param {string} message Text to be placed in pre element.
        */
        function nextquestion(header,number){
-                  
+            var menubuttons = document.getElementsByClassName(".quizmenbutn");
+	    menubuttons.remove();
+	    gapi.client.sheets.spreadsheets.values.get({
+            	spreadsheetId: '1bJvqu2n2Tfsf91vRqMsrwYdyh31wBCyJ9qU-usbWeOk',
+          	range: 'B1:M30',
+            }).then(function(response) {
+	    	var range = response.result;
+          	if (range.values.length > 0) {
+			var row = range.values[header];
+			var question = row[number+1];
+			
+		} else {
+		    console.log('No data found.');
+		}	    
+	    }, function(response) {
+            	console.log('Error: ' + response.result.error.message);
+            });
             }  
 
       function appendPre(message,header) {
@@ -130,7 +146,7 @@
 	pre.name = message;
 	pre.type = message;
 	pre.value = message;
-	pre.class =  ".btn";
+	pre.class =  ".quizmenubtn";
         var container = document.getElementsByClassName('quizheading');
 	container.value = message;
 	document.body.appendChild(pre);
@@ -156,7 +172,7 @@
 		    if (typeof row[0] !== "undefined"){
 		      var cellheader = row[0].slice(0,4);
 		      if (cellheader === "Quiz"){
-			    appendPre(row[1],i);
+			    appendPre(row[0],i);
 		      }
 	   	    }
             }
