@@ -122,10 +122,24 @@
        * @param {string} message Text to be placed in pre element.
        */
        function createquestion(question,range){
-       
+           var quizlabel = document.createElement("h1");
+	   quizlabel.value = question;
+	   quizlabel.class = "quizheading";
+	   var textNode = document.createTextNode(question);
+	   quizlabel.appendChild(textNode);
+	   var division = document.getElementByClassName("container")[0];
+	   division.appendChild(quizlabel);
        }
-       function createanswer(option, header,range){
-	       
+       function createanswer(option, header,range,questionnumber){
+	   var option = document.createElement("button");
+	   var optionrow = range[option+header];
+	   var answer = optionrow[questionnumber];
+	   var textNode = document.createTextNode(questionnumber);
+	   option.appendChild(textNode);
+	   option.class = "quizmenubtn";
+	   var container = document.getElementsByClassName("container")[0];
+	   container.appendChild(option);
+	   container.onclick = nextquestion(header,number+1)
        }
        function nextquestion(header,number){
 	    console.log("button clicked");
@@ -142,11 +156,11 @@
           	if (range.values.length > 0) {
 			var row = range.values[header];
 			var question = row[number+1];
-			createquestion(question,range);
-			createanswer('A',header,range);
-			createanswer('B',header,range);
-			createanswer('C',header,range);
-			createanswer('D',header,range);
+			createquestion(question,range,number);
+			createanswer(1,header,range,number);
+			createanswer{2,header,range,number);
+			createanswer(3,header,range,number);
+			createanswer(4,header,range,number);
 		} else {
 		    console.log('No data found.');
 		}	    
@@ -163,7 +177,7 @@
 	var division = document.body.getElementsByClassName("container")[0];
 	division.appendChild(pre);
 	console.log("Button created");
-	pre.onclick = console.log("button clicked");
+	pre.onclick = nextquestion(header,2);
       }
       /**
        * Print the names and majors of students in a sample spreadsheet:
