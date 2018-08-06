@@ -122,10 +122,11 @@
        * @param {string} message Text to be placed in pre element.
        */
        function nextquestion(header,number){
+	    console.log("button clicked");
             var menubuttons = document.getElementsByClassName("quizmenubtn");
-	       for (var i = 0; i = menubuttons.length; i++){
-		       menubuttons[i].parentNode.removeChild(menubuttons[i]);
-	       }
+	    for (var i = 0; i = menubuttons.length; i++){
+	    	menubuttons[i].parentNode.removeChild(menubuttons[i]);
+	    }
 	    //menubuttons.remove();
 	    gapi.client.sheets.spreadsheets.values.get({
             	spreadsheetId: '1bJvqu2n2Tfsf91vRqMsrwYdyh31wBCyJ9qU-usbWeOk',
