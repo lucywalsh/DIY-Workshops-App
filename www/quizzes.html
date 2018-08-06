@@ -156,7 +156,7 @@
 	    	var range = response.result;
           	if (range.values.length > 0) {
 			var row = range.values[header];
-			var question = row[number+1];
+			var question = row[number];
 			createquestion(question,range,number);
 			createanswer(1,header,range,number);
 			createanswer(2,header,range,number);
