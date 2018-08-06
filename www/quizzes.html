@@ -123,7 +123,7 @@
        */
        function nextquestion(header,number){
             var menubuttons = document.getElementsByClassName(".quizmenbutn");
-	    menubuttons.remove();
+	    //menubuttons.remove();
 	    gapi.client.sheets.spreadsheets.values.get({
             	spreadsheetId: '1bJvqu2n2Tfsf91vRqMsrwYdyh31wBCyJ9qU-usbWeOk',
           	range: 'B1:M30',
