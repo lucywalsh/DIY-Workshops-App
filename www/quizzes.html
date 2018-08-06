@@ -142,13 +142,10 @@
             }  
 
       function appendPre(message,header) {
-        var pre = document.createElement("input");
-	pre.name = message;
-	pre.type = message;
-	pre.value = message;
+        var pre = document.createElement("button");
+	var textnode = document.createTextNode(message);
+	pre.appendChild(textnode);
 	pre.class =  ".quizmenubtn";
-        var container = document.getElementsByClassName('quizheading');
-	container.value = message;
 	document.body.appendChild(pre);
         pre.onclick = nextquestion(header,1);
 	console.log("Button created");
