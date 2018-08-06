@@ -66,7 +66,7 @@
 	
 	<div class="limiter">
 
-		<div class="container">
+		<div class="container" id ="containertest">
 
 			<img src="img/blob.png">
 			
@@ -146,8 +146,8 @@
 	var textnode = document.createTextNode(message);
 	pre.appendChild(textnode);
 	pre.class =  ".quizmenubtn";
-	var division = document.getElementsByClassName(".container");
-	document.body.appendChild(pre);
+	var division = document.getElementsByClassName("container");
+	division.appendChild(pre);
         pre.onclick = nextquestion(header,1);
 	console.log("Button created");
       }
