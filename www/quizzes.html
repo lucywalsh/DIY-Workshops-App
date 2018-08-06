@@ -178,7 +178,7 @@
 	var division = document.body.getElementsByClassName("container")[0];
 	division.appendChild(pre);
 	console.log("Button created");
-	pre.addEventListener("click",nextquestion);
+	pre.addEventListener("click",function(){nextquestion(header,2)});
       }
       /**
        * Print the names and majors of students in a sample spreadsheet:
