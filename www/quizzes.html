@@ -132,7 +132,8 @@
 	pre.value = message;
 	pre.class =  ".btn";
         var container = document.getElementsByClassName('quizheading');
-	container.value = message
+	container.value = message;
+	document.body.appendChild(pre);
         pre.onclick = nextquestion(header,1);
 	console.log("Button created");
       }
