@@ -130,12 +130,12 @@
 	   var division = document.getElementsByClassName("container")[0];
 	   division.appendChild(quizlabel);
        }
-       function createanswer(option, header,range,questionnumber){
+       function createanswer(optionval,header,range,questionnumber){
 	   var option = document.createElement("button");
-	   console.log(option);
+	   console.log(optionval);
 	   console.log(header);
 	   console.log(option+header);
-	   var optionrow = range[option+header];
+	   var optionrow = range[optionval+header];
 	   var answer = optionrow[questionnumber];
 	   var textNode = document.createTextNode(questionnumber);
 	   option.appendChild(textNode);
