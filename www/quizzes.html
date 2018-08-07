@@ -132,18 +132,15 @@
        }
        function createanswer(optionval,header,range,questionnumber){
 	   var option = document.createElement("button");
-	   console.log(optionval);
-	   console.log(header);
-	   console.log(optionval+header);
 	   var optionrow = range[optionval+header];
 	   console.log(optionrow);
 	   var answer = optionrow[questionnumber];
 	   var textNode = document.createTextNode(questionnumber);
 	   option.appendChild(textNode);
-	   option.class = "quizmenubtn";
+	   option.className = "quizmenubtn";
 	   var container = document.getElementsByClassName("container")[0];
 	   container.appendChild(option);
-	   option.onclick = nextquestion(header,number+1);
+	   option.addEventListener("click",function(){nextquestion(header,questionnumber+1)});
        }
        function nextquestion(header,number){
 	    console.log("button clicked");
@@ -177,7 +174,7 @@
         var pre = document.createElement("button");
 	var textnode = document.createTextNode(message);
 	pre.appendChild(textnode);
-	pre.class =  "quizmenubtn";
+	pre.className = "quizmenubtn";
 	var division = document.body.getElementsByClassName("container")[0];
 	division.appendChild(pre);
 	console.log("Button created");
