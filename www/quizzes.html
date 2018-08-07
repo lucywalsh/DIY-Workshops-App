@@ -79,6 +79,7 @@
 	</div>
 	
 	<script defer type = "text/javascript">
+		var points = 0
 		// Client ID and API key from the Developer Console
         	var CLIENT_ID = '607367220939-vnonmb2l7t3l5r4337kak4oj2t13iunq.apps.googleusercontent.com';
       		var API_KEY = '	AIzaSyBx2kIQQJOGj9LxZeuN04nQLTL9grrAaHg';
@@ -140,7 +141,17 @@
 	   option.appendChild(textNode);
 	   var container = document.getElementsByClassName("container")[0];
 	   container.appendChild(option);
-	   option.addEventListener("click",function(){nextquestion(header,questionnumber+1)});
+	   option.addEventListener("click",function(){
+		   var answercheckrow = range[header+5];
+		   var answercheck = answercheckrow[questionnumber];
+		   if (optionval === answercheck){
+			   console.log("Answer was correct!");
+			   points++;
+		   }
+		   else{
+			   console.log("Answer was incorrect");
+		   }
+		   nextquestion(header,questionnumber+1)});
        }
        function nextquestion(header,number){
 	    console.log("button clicked");
