@@ -124,7 +124,7 @@
        function createquestion(question,range){
            var quizlabel = document.createElement("h1");
 	   quizlabel.value = question;
-	   quizlabel.class = "quizheading";
+	   quizlabel.className = "quizheading";
 	   var textNode = document.createTextNode(question);
 	   quizlabel.appendChild(textNode);
 	   var division = document.getElementsByClassName("container")[0];
@@ -144,7 +144,7 @@
        }
        function nextquestion(header,number){
 	    console.log("button clicked");
-            var menubuttons = document.getElementsByClassName("quizmenubtn");
+            var menubuttons = document.getElementsByClassName("quizmenubtn quizheading");
 	    for (var i = 0; i < menubuttons.length; i++){
 	    	menubuttons[i].parentNode.removeChild(menubuttons[i]);
 	    }
