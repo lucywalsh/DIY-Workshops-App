@@ -160,11 +160,11 @@
           	if (range.values.length > 0) {
 			var row = range.values[header];
 			var question = row[number];
-			createquestion(question,range,number);
-			createanswer(1,header,range,number);
-			createanswer(2,header,range,number);
-			createanswer(3,header,range,number);
-			createanswer(4,header,range,number);
+			createquestion(question,range.values,number);
+			createanswer(1,header,range.values,number);
+			createanswer(2,header,range.values,number);
+			createanswer(3,header,range.values,number);
+			createanswer(4,header,range.values,number);
 		} else {
 		    console.log('No data found.');
 		}	    
