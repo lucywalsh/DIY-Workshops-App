@@ -172,11 +172,17 @@
           	if (range.values.length > 0) {
 			var row = range.values[header];
 			var question = row[number];
-			createquestion(question,range.values,number);
-			createanswer(1,header,range.values,number);
-			createanswer(2,header,range.values,number);
-			createanswer(3,header,range.values,number);
-			createanswer(4,header,range.values,number);
+			if (typeof question === "undefined"){
+				console.log("End of quiz");
+				
+			}
+			else{
+				createquestion(question,range.values,number);
+				createanswer(1,header,range.values,number);
+				createanswer(2,header,range.values,number);
+				createanswer(3,header,range.values,number);
+				createanswer(4,header,range.values,number);
+			}
 		} else {
 		    console.log('No data found.');
 		}	    
@@ -187,9 +193,9 @@
 
       function appendPre(message,header) {
         var pre = document.createElement("button");
+	pre.className = "quizmenubtn";
 	var textnode = document.createTextNode(message);
 	pre.appendChild(textnode);
-	pre.className = "quizmenubtn";
 	var division = document.body.getElementsByClassName("container")[0];
 	division.appendChild(pre);
 	console.log("Button created");
