@@ -132,12 +132,12 @@
        }
        function createanswer(optionval,header,range,questionnumber){
 	   var option = document.createElement("button");
+	   option.className = "quizmenubtn";   
 	   var optionrow = range[optionval+header];
 	   console.log(optionrow);
 	   var answer = optionrow[questionnumber];
 	   var textNode = document.createTextNode(answer);
 	   option.appendChild(textNode);
-	   option.className = "quizmenubtn";
 	   var container = document.getElementsByClassName("container")[0];
 	   container.appendChild(option);
 	   option.addEventListener("click",function(){nextquestion(header,questionnumber+1)});
