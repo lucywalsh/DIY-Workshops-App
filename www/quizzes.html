@@ -158,10 +158,12 @@
             var menubuttons = document.getElementsByClassName("quizmenubtn");
 	    for (var i = 0; i = (menubuttons.length)-1; i++){
 	    	menubuttons[i].parentNode.removeChild(menubuttons[i]);
+		console.log("Removebutton");
 	    }
 	    var quiztitles = document.getElementsByClassName("quizheading");
 	    for (var j = 0; j = (quiztitles.length)-1; i++){
 	    	quiztitles[j].parentNode.removeChild(quiztitles[j]);
+		console.log("Removetitle");
 	    }
 	    //menubuttons.remove();
 	    gapi.client.sheets.spreadsheets.values.get({
