@@ -144,7 +144,7 @@
 	   option.addEventListener("click",function(){
 		   var answercheckrow = range[header+5];
 		   var answercheck = answercheckrow[questionnumber];
-		   if (optionval === answercheck){
+		   if (optionval === Number(answercheck)){
 			   console.log("Answer was correct!");
 			   points++;
 		   }
@@ -161,7 +161,7 @@
 	    }
 	    var quiztitles = document.getElementsByClassName("quizheading");
 	    for (var j = 0; j = (quiztitles.length)-1; i++){
-	    	quiztitles[i].parentNode.removeChild(quiztitles[i]);
+	    	quiztitles[j].parentNode.removeChild(quiztitles[j]);
 	    }
 	    //menubuttons.remove();
 	    gapi.client.sheets.spreadsheets.values.get({
