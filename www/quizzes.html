@@ -71,6 +71,8 @@
 			<img src="img/blob.png">
 			
 			<h1 class = "quizheading">Quizzes</h1>
+			
+			<button class = "quizmenubtn" onclick="window.location.href='homepage.html'">back</button>
 
 			<!--<i class="zmdi zmdi-assignment zmdi-hc-4x"></i>-->
 
@@ -176,7 +178,8 @@
 			var question = row[number];
 			if (typeof question === "undefined"){
 				console.log("End of quiz");
-				
+				points = 0;
+				listMajors();
 			}
 			else{
 				createquestion(question,range.values,number);
