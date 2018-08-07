@@ -145,7 +145,7 @@
        function nextquestion(header,number){
 	    console.log("button clicked");
             var menubuttons = document.getElementsByClassName("quizmenubtn");
-	    for (var i = 0; i < menubuttons.length; i++){
+	    for (var i = 0; i = (menubuttons.length)-1; i++){
 	    	menubuttons[i].parentNode.removeChild(menubuttons[i]);
 	    }
 	    var quiztitles = document.getElementsByClassName("quizheading");
