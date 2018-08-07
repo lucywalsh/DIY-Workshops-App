@@ -135,7 +135,7 @@
 	   var optionrow = range[optionval+header];
 	   console.log(optionrow);
 	   var answer = optionrow[questionnumber];
-	   var textNode = document.createTextNode(questionnumber);
+	   var textNode = document.createTextNode(answer);
 	   option.appendChild(textNode);
 	   option.className = "quizmenubtn";
 	   var container = document.getElementsByClassName("container")[0];
@@ -178,7 +178,7 @@
 	var division = document.body.getElementsByClassName("container")[0];
 	division.appendChild(pre);
 	console.log("Button created");
-	pre.addEventListener("click",function(){nextquestion(header,2)});
+	pre.addEventListener("click",function(){nextquestion(header,1)});
       }
       /**
        * Print the names and majors of students in a sample spreadsheet:
