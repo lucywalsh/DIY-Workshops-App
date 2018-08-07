@@ -132,6 +132,8 @@
        }
        function createanswer(option, header,range,questionnumber){
 	   var option = document.createElement("button");
+	   console.log(option);
+	   console.log(header);
 	   console.log(option+header);
 	   var optionrow = range[option+header];
 	   var answer = optionrow[questionnumber];
