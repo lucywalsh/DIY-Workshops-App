@@ -356,6 +356,14 @@ iframe {
   opacity: 0.57;
   width: 192px;
   height: 64px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 
