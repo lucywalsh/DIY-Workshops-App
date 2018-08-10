@@ -349,6 +349,11 @@ iframe {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+	
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .quizheading {
