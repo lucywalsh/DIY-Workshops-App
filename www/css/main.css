@@ -340,6 +340,8 @@ iframe {
   justify-content: center;
   align-items: center;
   background-color: rgba(71, 82, 94, 0);
+  padding: 0 20px;
+  width: 100%;
   border: 1px solid #47525E;
   border-radius: 8px;
   width: 288px;
