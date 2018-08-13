@@ -154,6 +154,22 @@
        *
        * @param {string} message Text to be placed in pre element.
        */
+		
+       class answerStore{
+        	constructor(number,correct){
+			this._questionNumber = number,
+			this._answerCorrect = correct,
+		}
+	       
+       };
+		
+       function LinkedList() {}
+       		LinkedList.prototype = {
+       		length: 0,
+  		first: null,
+  		last: null
+       };
+		
        function createquestion(question,range){
            var quizlabel = document.createElement("h1");
 	   quizlabel.value = question;
