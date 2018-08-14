@@ -166,10 +166,11 @@
 	  this.length++;
 	};
 		
-	LinkedList.Circular.prototype.remove = function(node) {
+	LinkedList.Circular.prototype.removeall = function(node) {
 	  if (this.length > 1) {
 	    node.prev.next = node.next;
 	    node.next.prev = node.prev;
+	    this.Circular.prototype.removeall(node.next);
 	    if (node == this.first) { this.first = node.next; }
 	    if (node == this.last) { this.last = node.prev; }
 	  } else {
@@ -237,6 +238,7 @@
 			var row = range.values[header];
 			var question = row[number];
 			if (typeof question === "undefined"){
+				//Need to print the linkedlist answer values!
 				console.log("End of quiz");
 				points = 0;
 				listMajors();
