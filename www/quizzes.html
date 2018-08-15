@@ -230,7 +230,7 @@
 	    gapi.client.sheets.spreadsheets.values.get({
             	spreadsheetId: '1bJvqu2n2Tfsf91vRqMsrwYdyh31wBCyJ9qU-usbWeOk',
           	range: 'B1:M30',
-            }).then(function(response) {
+            }).then(function(response){
 	    	var range = response.result;
           	if (range.values.length > 0) {
 			var row = range.values[header];
@@ -238,6 +238,7 @@
 			if (typeof question === "undefined"){
 				//Need to print the linkedlist answer values!
 				console.log("End of quiz");
+				console.log(L1);
 				points = 0;
 				listMajors();
 			}
@@ -254,7 +255,7 @@
 	    }, function(response) {
             	console.log('Error: ' + response.result.error.message);
             });
-            }  
+      }  
 
       function appendPre(message,header) {
 	L1 = new LinkedList;
