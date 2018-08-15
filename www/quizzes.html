@@ -180,10 +180,10 @@
 	}
        function printanswer(node){
 	       console.log(node.data.questionnumber + " " + node.data.correct);
-	       if (node.next !== "undefined") {
+	       if (typeof(node.next) !== "undefined") {
 		       printanswer(node.next);
 	       }
-	       creatquestion(node.next.data.questionnumber + " " + node.data.next.correct);
+	       creatquestion(node.data.questionnumber + " " + node.data.correct);
 	       
        }
 		
