@@ -183,10 +183,11 @@
 	       if (node.next !== "undefined") {
 		       printanswer(node.next);
 	       }
+	       creatquestion(node.data.questionnumber + " " + node.data.correct);
 	       
        }
 		
-       function createquestion(question,range){
+       function createquestion(question){
            var quizlabel = document.createElement("h1");
 	   quizlabel.value = question;
 	   quizlabel.className = "quizheading";
