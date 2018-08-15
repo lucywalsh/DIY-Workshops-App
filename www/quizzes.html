@@ -178,6 +178,13 @@
 	    }
 	  }
 	}
+       function printanswer(node){
+	       console.log(node.data.questionnumber + " " + node.data.correct);
+	       if (node.next ~= "undefined") {
+		       printanswer(node.next);
+	       }
+	       
+       }
 		
        function createquestion(question,range){
            var quizlabel = document.createElement("h1");
@@ -238,7 +245,7 @@
 			if (typeof question === "undefined"){
 				//Need to print the linkedlist answer values!
 				console.log("End of quiz");
-				console.log(L1);
+				printanswer(L1.head);
 				points = 0;
 				listMajors();
 			}
