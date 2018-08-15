@@ -183,7 +183,7 @@
 	       if (node.next !== "undefined") {
 		       printanswer(node.next);
 	       }
-	       creatquestion(node.data.questionnumber + " " + node.data.correct);
+	       creatquestion(node.next.data.questionnumber + " " + node.data.next.correct);
 	       
        }
 		
