@@ -180,11 +180,10 @@
 	}
        function printanswer(node){
 	       console.log(node.data.questionnumber + " " + node.data.correct);
+	       createquestion(node.data.questionnumber + " " + node.data.correct);
 	       if (node.next) {
 		       printanswer(node.next);
-	       }
-	       createquestion(node.data.questionnumber + " " + node.data.correct);
-	       
+	       }     
        }	
        function createquestion(question){
            var quizlabel = document.createElement("h1");
