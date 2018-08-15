@@ -180,7 +180,7 @@
 	}
        function printanswer(node){
 	       console.log(node.data.questionnumber + " " + node.data.correct);
-	       if (node.next ~= "undefined") {
+	       if (node.next !== "undefined") {
 		       printanswer(node.next);
 	       }
 	       
