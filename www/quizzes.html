@@ -180,13 +180,12 @@
 	}
        function printanswer(node){
 	       console.log(node.data.questionnumber + " " + node.data.correct);
-	       if (typeof(node.next) !== "undefined") {
+	       if (node.next !== "null") {
 		       printanswer(node.next);
 	       }
 	       creatquestion(node.data.questionnumber + " " + node.data.correct);
 	       
-       }
-		
+       }	
        function createquestion(question){
            var quizlabel = document.createElement("h1");
 	   quizlabel.value = question;
