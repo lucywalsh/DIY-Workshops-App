@@ -180,7 +180,7 @@
 	}
        function printanswer(node){
 	       console.log(node.data.questionnumber + " " + node.data.correct);
-	       if (node.next !== "null") {
+	       if (node.next) {
 		       printanswer(node.next);
 	       }
 	       creatquestion(node.data.questionnumber + " " + node.data.correct);
