@@ -92,6 +92,7 @@
 	      // Authorization scopes required by the API; multiple scopes can be
 	      // included, separated by spaces.
 	      var SCOPES = "https://www.googleapis.com/auth/spreadsheets.readonly";
+		var L1;
 
       /**
        *  On load, called to load the auth2 library and API client library.
@@ -124,64 +125,59 @@
        *
        * @param {string} message Text to be placed in pre element.
        */
+      class answerStore {
+	      constructor(number,correct){
+		      this.questionnumber = number;
+		      this.correct = correct;
+	      }
+      }
 		
-       class answerStore {
-        	constructor(number,correct){
-			this._questionNumber = number;
-			this._answerCorrect = correct;
-		}
-       };
-		
-	function LinkedList() {}
-	LinkedList.prototype = {
-	  length: 0,
-	  first: null,
-	  last: null
-	};
-		
-	LinkedList.Circular = function() {};
-	LinkedList.Circular.prototype = new LinkedList();	
-	LinkedList.Circular.prototype.append = function(node) {
- 		if (this.first === null) {
-			node.prev = node;
-			node.next = node;
-			this.first = node;
-			this.last = node;
-		} else {
-		    	node.prev = this.last;
-			node.next = this.first;
-			this.first.prev = node;
-			this.last.next = node;
-			this.last = node;
-		}
-		this.length++;
-	};
-		
-	LinkedList.Circular.prototype.insertAfter = function(node, newNode) {
-	  newNode.prev = node;
-	  newNode.next = node.next;
-	  node.next.prev = newNode;
-	  node.next = newNode;
-	  if (newNode.prev == this.last) { this.last = newNode; }
-	  this.length++;
-	};
-		
-	LinkedList.Circular.prototype.removeall = function(node) {
-	  if (this.length > 1) {
-	    node.prev.next = node.next;
-	    node.next.prev = node.prev;
-	    this.Circular.prototype.removeall(node.next);
-	    if (node == this.first) { this.first = node.next; }
-	    if (node == this.last) { this.last = node.prev; }
-	  } else {
-	    this.first = null;
-	    this.last = null;
+      class LinkedList {
+	  constructor() {
+	    this.head = null;
 	  }
-	  node.prev = null;
-	  node.next = null;
-	  this.length--;
-	};
 
+	  insertNodeAtTail(val) {
+	    var node = {
+	      data: val,
+	      next: null
+	    };
+	    //checks if the overall LinkedList has a head or not, if not then adds the tail as the head else appends to end
+	    if (!this.head) {
+	      this.head = node;
+	    } else {
+	      var p1 = this.head;
+	      while (p1.next) {
+		p1 = p1.next;
+	      }
+	      p1.next = node;
+	    }
+	  }
+
+	  deleteNode(val) {
+	    // If linked list is empty
+	    if (!this.head) {
+	      console.log('Linked list is empty.');
+	      return;
+	    }
+	    // if you have to delete the head
+	    if (this.head.data === val) {
+	      this.head = this.head.next;
+	    } else {
+	      var p1 = this.head;
+	      var p2 = p1.next;
+	      while (p2) {
+		if (p2.data === val) {
+		  p1.next = p2.next;
+		  break;
+		} else {
+		  p1 = p2;
+		}
+		p2 = p2.next;
+	      }
+	    }
+	  }
+	}
 		
        function createquestion(question,range){
            var quizlabel = document.createElement("h1");
@@ -207,12 +203,14 @@
 		   var answercheck = answercheckrow[questionnumber];
 		   if (optionval === Number(answercheck)){
 			   console.log("Answer was correct!");
-			   LinkedList.Circular.prototype.append(new answerStore(questionnumber,true));
+			   L1.insertNodeAtTail(new answerStore(questionnumber,true));
+			   console.log("adding answerlog");
 			   points++;
 		   }
 		   else{
 			   console.log("Answer was incorrect");
-			   LinkedList.Circular.prototype.append(new answerStore(questionnumber,false));
+			   L1.insertNodeAtTail(new answerStore(questionnumber,false));
+			   console.log("adding answerlog");
 		   }
 		   nextquestion(header,questionnumber+1)});
        }
@@ -259,6 +257,7 @@
             }  
 
       function appendPre(message,header) {
+	L1 = new LinkedList;
         var pre = document.createElement("button");
 	pre.className = "quizmenubtn";
 	var textnode = document.createTextNode(message);
