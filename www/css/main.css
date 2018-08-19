@@ -7,20 +7,20 @@
 
 @font-face {
   font-family: Ubuntu-Regular;
-  src: url('../fonts/ubuntu/Ubuntu-Regular.ttf'); 
+  src: url('../fonts/ubuntu/Ubuntu-Regular.ttf');
 }
 
 @font-face {
   font-family: Ubuntu-Bold;
-  src: url('../fonts/ubuntu/Ubuntu-Bold.ttf'); 
+  src: url('../fonts/ubuntu/Ubuntu-Bold.ttf');
 }
 
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 
 * {
-	margin: 0px; 
-	padding: 0px; 
+	margin: 0px;
+	padding: 0px;
 	box-sizing: border-box;
 }
 
@@ -137,7 +137,7 @@ iframe {
 }
 
 .container {
-  width: 100%;  
+  width: 100%;
   min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -148,16 +148,16 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;;
+
 }
 
 
 .wrap-login100 {
   width: 390px;
-  background: #fff;
   border-radius: 10px;
   position: relative;
 }
@@ -172,14 +172,12 @@ iframe {
 
 .login100-form-title {
   font-family: Ubuntu-Bold;
-  font-size: 30px;
-  color: #fcdd6f;
-  line-height: 1.2;
-  text-transform: uppercase;
+  font-size: 20px;
+  color: #fdefa3;
   text-align: center;
-
   width: 100%;
   display: block;
+  margin-bottom: 0px;
 }
 
 /*------------------------------------------------------------------
@@ -191,6 +189,7 @@ iframe {
   background-color: #e6e6e6;
   border: 1px solid transparent;
   border-radius: 3px;
+
 }
 
 
@@ -257,7 +256,17 @@ iframe {
   -o-transform: scale(1);
   transform: scale(1);
 }
-
+/*------------------------------------------------------------------
+[ Logo ]*/
+.logo{
+  width: 40vh ;
+  height: 100%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 0px
+   position:fixed;
+}
 /*------------------------------------------------------------------
 [ Button ]*/
 .container-login100-form-btn {
@@ -287,7 +296,7 @@ iframe {
   padding: 0 20px;
   width: 100%;
   height: 62px;
-  background-color: #fdefa3;
+  background-color: #81d742;
   border-radius: 3px;
 
   -webkit-transition: all 0.4s;
@@ -311,8 +320,7 @@ iframe {
   align-items: center;
   padding: 0 20px;
   width: 100%;
-  height: 62px;
-  background-color: #fdefa3;
+  height: 150px;
   border-radius: 3px;
 
   -webkit-transition: all 0.4s;
@@ -322,7 +330,7 @@ iframe {
 }
 
 .login-btn:hover {
-  background-color: #fcdd6f;
+  background-color: #fdefa3;
 }
 
 .btn:hover {
