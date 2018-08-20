@@ -307,8 +307,8 @@ iframe {
 
 .btn {
   font-family: Ubuntu-Bold;
-  font-size: 16px;
-  color: #000;
+  font-size: 20px;
+  color: white;
   line-height: 1.2;
 
   display: -webkit-box;
@@ -319,7 +319,7 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  width: 100%;
+  width: 150px;
   height: 150px;
   border-radius: 3px;
 
