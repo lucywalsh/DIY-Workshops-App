@@ -1,6 +1,6 @@
 <?php
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'postgres');
-define('DB_HOST', 'localhost');
+$db_host = 'localhost';
+$db_name = 'dbname';
+$db_user = 'username';
+$db_pass = '';
 ?>
