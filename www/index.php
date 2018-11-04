@@ -17,9 +17,10 @@ if($connection) {
         //GO TO ANOTHER PAGE
     }
 
-/* alternate PDO connection
+/* alternate PDO connection·
 $dsn = "pgsql:host=$db_host dbname=$db_name";
 try{
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $db = new PDO($dsn, $db_user, $db_pass);
 echo "Connected to db"
 }
