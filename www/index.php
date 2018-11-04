@@ -16,4 +16,9 @@ if($connection) {
         echo 'there has been an error connecting';
         //GO TO ANOTHER PAGE
     }
+
+/* alternate PDO connection
+$dsn = "pgsql:host=$db_host dbname=$db_name";
+$db = new PDO($dsn, $db_user, $db_pass);
+*/
 ?>
