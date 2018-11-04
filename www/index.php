@@ -19,6 +19,12 @@ if($connection) {
 
 /* alternate PDO connection
 $dsn = "pgsql:host=$db_host dbname=$db_name";
+try{
 $db = new PDO($dsn, $db_user, $db_pass);
+echo "Connected to db"
+}
+catch (PDOException $ex){
+  echo "Connection failed ".$ex->getMessage();
+}
 */
 ?>
