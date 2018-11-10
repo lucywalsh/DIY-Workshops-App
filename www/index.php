@@ -24,6 +24,6 @@ try{
 $db = new PDO($dsn, $db_user, $db_pass);
 echo "Connected to database";
 }catch (PDOException $ex){
-  echo "Failed to connect";
+  header('Location: database_fail.html');
 }
 ?>
