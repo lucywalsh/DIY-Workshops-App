@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "PPL PWR DIY Workshops",
+  "short_name": "PPL PWR DIY Workshops",
+  "version": "com.ewbucl.diyworkshops",
+  "description": "Prototype app built by Engineers Without Borders UCL (github.com/EWB-UCL) for PPL PWR (pplpwr.org.uk) to complement their DIY Sustainability Workshops",
+  "author": "Engineers Without Borders UCL",
+  "icons": [],
+  "start_url": "index.html"
+}
